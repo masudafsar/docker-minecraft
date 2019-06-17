@@ -1,3 +1,4 @@
+cp .gitignore .dockerignore
 docker container rm -f mc
 docker image rm minecraft:latest
 

@@ -2,4 +2,11 @@
 !/server/server.properties
 !/server/eula.txt
 !/server/spigot-1.14.2.jar
-!/server/plugins/*
+
+!/server/plugins/
+/server/plugins/**/*.*
+!/server/plugins/**/*.jar
+!/server/plugins/**/*.yml
+
+!**/.gitkeep
+.dockerignore
