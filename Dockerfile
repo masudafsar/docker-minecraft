@@ -1,4 +1,4 @@
-FROM        openjdk:8u111-jdk
+FROM        openjdk:8u212
 LABEL       maintainer "Masud Afsar"
 
 RUN         useradd minecraft -m -s /bin/bash
@@ -9,7 +9,10 @@ WORKDIR     /home/minecraft/mc
 
 RUN         chown -R minecraft:minecraft /home/minecraft
 
-EXPOSE      25565 8123
+#minecraft
+EXPOSE      25565
+#DynMap
+EXPOSE      8123
 
 USER        minecraft
 
