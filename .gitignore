@@ -9,5 +9,7 @@
 !/server/plugins/**/*.jar
 !/server/plugins/**/*.yml
 
+/server/plugins/SetHome/Homes.yml
+
 !**/.gitkeep
 .dockerignore
