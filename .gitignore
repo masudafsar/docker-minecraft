@@ -10,6 +10,7 @@
 !/server/plugins/**/*.yml
 
 /server/plugins/SetHome/Homes.yml
+/server/plugins/Jobs/
 
 !**/.gitkeep
 .dockerignore
