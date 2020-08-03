@@ -1,7 +1,7 @@
 /server/*
 !/server/server.properties
 !/server/eula.txt
-!/server/spigot-1.14.2.jar
+!/server/spigot-1.16.1.jar
 
 !/server/plugins/
 /server/plugins/**/*
