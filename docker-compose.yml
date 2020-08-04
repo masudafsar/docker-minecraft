@@ -1,7 +1,22 @@
 version: "3"
 services:
+  db:
+    image: "mysql:5.7"
+    restart: always
+    environment:
+      MYSQL_USER: "JoyCraft"
+      MYSQL_PASSWORD: "bi6NiODPnOwyKk1569ldtjGQVOLupTI0"
+      MYSQL_ROOT_PASSWORD: "D3iLaGHUwENNlstGjBAOMCl1pdnuMksa"
+      MYSQL_DATABASE: "JoyCraft"
+    networks:
+      - "db"
+    volumes:
+      - "db-data:/var/lib/mysql"
+  
 
   minecraft:
+    depends_on:
+      - "db"
     build: .
     expose:
       - "25565"
@@ -9,3 +24,18 @@ services:
     ports:
       - "25565:25565"
       - "8123:8123"
+    networks:
+      - "db"
+      - "mc"
+    volumes:
+      - "./server:/home/minecraft/mc/server"
+
+volumes:
+  db-data:
+    driver: "local"
+
+networks:
+  mc:
+    driver: "bridge"
+  db:
+    driver: "bridge"
