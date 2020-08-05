@@ -7,13 +7,13 @@ COPY        . /home/minecraft/mc/
 
 WORKDIR     /home/minecraft/mc
 
-RUN         chown -R minecraft:minecraft /home/minecraft
+# RUN         chown -R minecraft:minecraft /home/minecraft
 
 #minecraft
 EXPOSE      25565
 #DynMap
 EXPOSE      8123
 
-USER        minecraft
+# USER        minecraft
 
 ENTRYPOINT  ["/home/minecraft/mc/run.sh"]
